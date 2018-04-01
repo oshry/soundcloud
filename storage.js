@@ -31,8 +31,11 @@ class Storage{
                     byLikes.sort((a,b) => {
                         return a.likes_count - b.likes_count;
                     });
+                    //get top tracks
                     this.top = byLikes.slice(Math.max(byLikes.length - num, 1)).reverse();
+                    //get bottom tracks
                     this.bottom = byLikes.slice(0, num).reverse();
+                    //show only title , description, likes_count, tag_list
                     this.top = this.get_only(this.top);
                     this.bottom = this.get_only(this.bottom);
                     //Top Songs
@@ -41,11 +44,11 @@ class Storage{
                     // Worst Songs
                     console.log(`${this.band} Worst Songs: `);
                     this.myLogger.info(this.bottom, { "band": this.band });
-
                     client.close(result);
                 });
             });
     }
+    //return only title , description, likes_count, tag_list
     get_only(arr){
         var m = arr.map((item) => {
             return [item.title, item.description, item.likes_count, item.tag_list]

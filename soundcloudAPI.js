@@ -50,6 +50,7 @@ class Sound{
         }
     }
     topBands(){
+        //sort by counter
         this.topBandsList.sort((a,b) => {
             return a.counter < b.counter;
         });
