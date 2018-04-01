@@ -1,0 +1,17 @@
+{
+  "name": "soundcloud",
+  "version": "1.0.0",
+  "description": " server to soundcloud API server",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "author": "Oshry Levy",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "dateformat": "^3.0.3",
+    "mongodb": "^3.0.5",
+    "winston": "^3.0.0-rc3"
+  }
+}
